@@ -1,0 +1,224 @@
+<html>
+  <head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/media-query.css" />
+  </head>
+  <body>
+    <!-- info and navigation Section -->
+
+    <header>
+      <nav class="navbar navbar-expand-lg pt-lg-3">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="" />
+            Weather
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto py-2 text-center mt-1">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Search">Search</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#mobileApp">Mobile App</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#Subscribe">Subscribe</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="About" class="content py-5">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6">
+              <div class="caption">
+                <h3 class="fw-light">Weather App</h3>
+                <p class="text-muted">
+                  Having an up to date information about the weather helps us to
+                  take well-read decisions. These weather apps constantly update
+                  the forecasts for a day or hour or sometimes for even a
+                  minute. These can be simply termed as the compact weather
+                  devices, as they do not only tell about the temperature of
+                  that specific region instead they can describe the accurate
+                  time of the sunrise and sunset, the time of the rainfall,
+                  humidity levels, etc.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="img">
+                <img
+                  class="img-fluid"
+                  src="images/raining-animate-1.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- weather Section -->
+    <section id="Search" class="main-section">
+      <div class="container">
+        <input
+          type="text"
+          placeholder="Search By City"
+          name=""
+          id="searchInput"
+        />
+
+        <div class="d-flex flex-wrap g-5 mt-5">
+          <div class="inner currentDay overflow-hidden rounded">
+            <div id="date" class="date d-flex justify-content-between align-items-center">
+              <span id="currentDayOfWeek">Sunday</span>
+              <span id="currentDayAndMonth" >23 March</span>
+            </div>
+            <div class="infoBody">
+              <h4 id="currenCity">Cairo</h4>
+              <div
+                class="main-info py-3 d-flex justify-content-between align-items-center"
+              >
+                <p id="currentTempC">21<sup>o</sup>C</p>
+                <div id="currentIcon" class="icon">icon</div>
+              </div>
+              <p id="currenText">Sunny</p>
+              <div class="other-info">
+                <i class="fas fa-umbrella pr-1"></i> <span id="humidity"> 44 %</span>
+                <i class="fas fa-wind pl-3 pr-1"></i> <span id="wind_kph"> 20.5 km/h</span>
+                <i class="far fa-compass pl-3 pr-1"></i> <span id="wind_dir"> NE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inner nextDay overflow-hidden rounded">
+            <div class="date d-flex justify-content-between align-items-center">
+              <span id="tommorowDayOfWeek">Sunday</span>
+              <span id="tommorowDayAndMonth">23 March</span>
+            </div>
+            <div class="infoBody">
+              <div id="tommorowIcon">Cairo</div>
+              <div
+                class="main-info py-4 d-flex flex-column justify-content-between align-items-center"
+              >
+                <p id="tommorowTempC">21<sup>o</sup>C</p>
+                <div id="tommorowMintempC">21<sup>o</sup>C</div>
+              </div>
+              <p id="tommorowText">Sunny</p>
+            </div>
+          </div>
+
+          <div class="inner nextDay overflow-hidden rounded">
+            <div class="date d-flex justify-content-between align-items-center">
+              <span id="afterTommorowDayOfWeek">Sunday</span>
+              <span id="afterTommorowDayAndMonth">23 March</span>
+            </div>
+            <div class="infoBody">
+              <div id="afterTommorowIcon">Cairo</div>
+              <div
+                class="main-info py-4 d-flex flex-column justify-content-between align-items-center"
+              >
+                <p id="afterTommorowTempC">21<sup>o</sup>C</p>
+                <div id="afterTommorowMintempC">21<sup>o</sup>C</div>
+              </div>
+              <p id="afterTommorowText">Sunny</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile App Section -->
+    <section id="mobileApp" class="mobileApp py-5 mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <img class="img-fluid" src="images/download.png" alt="" />
+          </div>
+          <div class="py-3 text-center col-lg-8">
+            <h4>Mobile App</h4>
+            <p class="text-muted">
+              This weather app is one of best free weather apps with full
+              features:
+            </p>
+            <p class="text-muted">
+              Local weather weather map (weather map service) and weather
+              widgets.
+            </p>
+            <button>Download Android</button>
+            <button>Download iOs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+
+    <section id="Subscribe">
+      <section class="Subscribe py-5 mt-5">
+        <div class="container">
+          <div class="row Subscribe-layOut align-items-center">
+            <div class="py-3 text-center col-lg-8">
+              <h4>Subscribe</h4>
+              <p class="pb-4 text-muted">
+                Get daily weather updates, quotes & more..
+              </p>
+
+              <input
+               
+                placeholder="type your email to Subscribe"
+                type="text"
+              />
+              <button>Subscribe</button>
+            </div>
+            <div class="col-lg-4">
+              <img class="img-fluid" src="images/subscribe.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer class="mt-4">
+      <p>Copyright © 2025 Designed by Hassan. All rights reserved</p>
+      <div class="social-media text-white text-center mt-2">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-pinterest"></i>
+        <i class="fab fa-google-plus"></i>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
