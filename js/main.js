@@ -62,7 +62,7 @@ let afterTommorowText = document.getElementById("afterTommorowText");
 async function getWeather(cityName) {
   try {
     let data = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=74b6067799894143a5b64413252102&q=${cityName}&days=3&aqi=no&alerts=no`
+      `https://api.weatherapi.com/v1/forecast.json?key=74b6067799894143a5b64413252102&q=${cityName}&days=3&aqi=no&alerts=no`
     );
 
     let pureData = await data.json();
